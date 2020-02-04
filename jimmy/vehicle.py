@@ -1,5 +1,4 @@
-from time import time
-
+from jimmy.utils import millis
 from jimmy.config import SECOND
 
 
@@ -27,13 +26,13 @@ class Vehicle:
         # Todo: Make control only when new data received
         # Todo: Provide logger support (when config.LOGGING = True)
         wait_time = SECOND / frequency
-        tic = time()
+        tic = millis()
 
         while True:
-            if tic - time() > wait_time:
+            if tic - millis() > wait_time:
                 for name, module in self.sensors.items():
                     self.data[name] = module.get_data()
 
                 self.control()
 
-                tic = time()
+                tic = millis()
