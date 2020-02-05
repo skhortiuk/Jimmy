@@ -11,7 +11,7 @@ class SensorData:
 
 class BaseSensor(metaclass=ABCMeta):
     def __init__(self, update_frequency: int = 50):
-        self._frequency = update_frequency
+        self._frequency: int = update_frequency
         self._update_time: int = SECOND // self._frequency
         self._sensor_enabled: bool = False
         self._tic: float = millis()

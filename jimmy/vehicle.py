@@ -10,7 +10,7 @@ class Vehicle:
         self.data = {}
 
     def control(self) -> None:
-        """Do main control functions based on data received from sensors.
+        """Do main control functions based on received data from sensors.
         """
         pass
 
