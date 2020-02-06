@@ -1,3 +1,6 @@
+from typing import Dict
+
+from jimmy.sensor import BaseSensor, SensorData
 from jimmy.utils import millis
 from jimmy.config import SECOND
 
@@ -6,8 +9,8 @@ class Vehicle:
     def __init__(self):
         # Todo: Add modules validation (unique, isinstance(BaseModule),
         #  module loaded correctly)
-        self.sensors = {}
-        self.data = {}
+        self.sensors: Dict[BaseSensor] = {}
+        self.data: Dict[SensorData] = {}
 
     def control(self) -> None:
         """Do main control functions based on received data from sensors.
