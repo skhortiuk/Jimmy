@@ -1,6 +1,6 @@
 from typing import Dict
 
-from jimmy.sensor import BaseSensor, SensorData
+from jimmy.sensors.base import BaseSensor, SensorData
 from jimmy.utils import millis
 from jimmy.config import SECOND
 
