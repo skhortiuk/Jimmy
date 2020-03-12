@@ -20,7 +20,7 @@ class BaseDispatcher:
     def dispatch(self, event: BaseSensorType):
         self.pre_load(event)
         for handler_obj in self.handlers:
-            if event.validate(handler_obj.handler):
+            if event.validate(handler_obj):
                 handler_obj.handler.pre_load(event)
                 handler_obj.handler.handle(event)
                 handler_obj.handler.post_load(event)
