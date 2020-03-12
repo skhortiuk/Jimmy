@@ -11,8 +11,8 @@ class BaseDispatcher:
         self.handlers = []
 
     def register(self, handler, name=None, condition=None):
-        name = getattr(handler, "name", name)
-        condition = getattr(handler, "condition", condition)
+        name = name or getattr(handler, "name", None)
+        condition = condition or getattr(handler, "condition", None)
         if not name and not condition:
             raise ValueError("You should provide valid name or condition.")
         self.handlers.append(handler_object(name, condition, handler))
