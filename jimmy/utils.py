@@ -1,12 +1,14 @@
 from time import time
 
+from jimmy.config import SECOND
+
 
 def millis() -> int:
     """
     Returns:
         Current time in milliseconds
     """
-    return int(round(time() * 1000))
+    return int(round(time() * SECOND))
 
 
 def frequency_to_ms(frequency: int) -> int:
@@ -17,4 +19,4 @@ def frequency_to_ms(frequency: int) -> int:
     Returns:
         Number of milliseconds equals to frequency in Hz
     """
-    return int(round(1000 / frequency))
+    return int(round(SECOND / frequency))

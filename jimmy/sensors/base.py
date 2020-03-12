@@ -1,4 +1,4 @@
-from abc import ABCMeta, abstractmethod
+from abc import abstractmethod, ABC
 
 
 class SensorData:
@@ -7,7 +7,7 @@ class SensorData:
     pass
 
 
-class BaseSensor(metaclass=ABCMeta):
+class BaseSensor(ABC):
     @abstractmethod
     def connect(self, timeout: int):
         pass
