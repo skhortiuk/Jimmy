@@ -1,0 +1,2 @@
+git+ssh://git@github.com/skhortiuk/vl53l0x.git
+smbus2==0.3.0
