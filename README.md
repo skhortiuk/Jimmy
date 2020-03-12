@@ -16,7 +16,7 @@ dispatcher = BaseDispatcher()
 # first:
 dispatcher.register(TestHandler())
 # second:
-dispatcher.register(TestHandler(), name="whatever", condition=callable(<handler>, <event>))
+dispatcher.register(TestHandler(), name="whatever", condition=callable(<event>))
 
 # for the first case handler shoud look like:
 
